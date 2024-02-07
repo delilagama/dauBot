@@ -34,7 +34,6 @@ def getResponse(message):
                     "!mood: dauBot's current mood or desires\n"
             )
         return commands
-    
     elif message.startswith("!"):
         if message in commands_dict:
             return commands_dict[message]
