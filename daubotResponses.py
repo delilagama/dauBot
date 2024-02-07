@@ -27,18 +27,18 @@ def getResponse(message):
                 return commands_dict[message]
             elif message == "!commands":
                 commands = ("## Hi, I'm dauBot! Here are my commands. \n"
-                            "#### Please be gentle with me. (⁠･⁠–⁠･⁠⁠⁠)\(⁠･⁠◡⁠･⁠)/ \n"
+                            "<h6> Please be gentle with me. (⁠･⁠–⁠･⁠⁠⁠)\(⁠･⁠◡⁠･⁠)/ </h6>\n"
                             "### drive 'n documents \n"
-                            "!drive: Team Google Drive \n"
-                            "!teamminutes: Minutes for Team Meetings \n"
-                            "!consultationminutes: Minutes for Weekly Consultations \n"
-                            "!agenda: Agendas for Weekly Consultations \n"
-                            "!proposal: Project Proposal Folder \n"
-                            "!progressreport: Team Progress Report Folder \n"
-                            "!money: Finance Folder \n"
-                            "!secretary: This and next week's secretary for the Weekly Consultations \n"
+                            "`!drive`: Team Google Drive \n"
+                            "`!teamminutes`: Minutes for Team Meetings \n"
+                            "`!consultationminutes`: Minutes for Weekly Consultations \n"
+                            "`!agenda`: Agendas for Weekly Consultations \n"
+                            "`!proposal`: Project Proposal Folder \n"
+                            "`!progressreport`: Team Progress Report Folder \n"
+                            "`!money`: Finance Folder \n"
+                            "`!secretary`: This and next week's secretary for the Weekly Consultations \n"
                             "### goofs \n"
-                            "!mood: dauBot's current mood or desires \n")
+                            "`!mood`: dauBot's current mood or desires \n")
                 return commands
             elif message == "!secretary":
                 members = ["Josh", "Sarthak", "Delila", "Adrian", "Brendan", "Calvin"]
