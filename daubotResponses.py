@@ -26,7 +26,9 @@ def getResponse(message):
             if message in commands_dict:
                 return commands_dict[message]
             elif message == "!commands":
-                commands = ("## drive 'n documents \n"
+                commands = ("## Hi, I'm dauBot! Here are my commands. \n"
+                            "###### Please be gentle with me. (⁠･⁠–⁠･⁠⁠⁠)\(⁠･⁠◡⁠･⁠)/ \n"
+                            "### drive 'n documents \n"
                             "!drive: Team Google Drive \n"
                             "!teamminutes: Minutes for Team Meetings \n"
                             "!consultationminutes: Minutes for Weekly Consultations \n"
@@ -35,7 +37,7 @@ def getResponse(message):
                             "!progressreport: Team Progress Report Folder \n"
                             "!money: Finance Folder \n"
                             "!secretary: This and next week's secretary for the Weekly Consultations \n"
-                            "## goofs \n"
+                            "### goofs \n"
                             "!mood: dauBot's current mood or desires \n")
                 return commands
             elif message == "!secretary":
