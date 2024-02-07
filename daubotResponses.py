@@ -11,7 +11,9 @@ def getSecretary(members):
 def getResponse(message):
     message = message.lower().strip()
     print(f"Processing message: {message}")
-    commands_dict = {
+
+    if message.startswith("!"):
+            commands_dict = {
         "!drive" : "[Team Google Drive](https://drive.google.com/drive/folders/16tPSO0hIrCiHqVVeMNxAOsyQ8pf2HekL)",
         "!teamminutes" : "[Minutes for Team Meetings](https://drive.google.com/drive/folders/1nioDHPSpEN7PiBd8hLxn4nCo0KgSHplr)",
         "!consultationminutes" : "[Minutes for Weekly Consultations](https://drive.google.com/drive/folders/1PBzHmYgMdNj8EpRhF1_I7Ax9ZcI19Bhg)",
@@ -21,7 +23,6 @@ def getResponse(message):
         "!money" : "[Finance Folder](https://drive.google.com/drive/folders/1K6EMuQ965UPX8mEd3L9_tnvLGGbkIVye)"
     }
 
-    if message.startswith("!"):
         if message in commands_dict:
             return commands_dict[message]
         elif message == "!commands":
