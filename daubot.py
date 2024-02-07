@@ -1,5 +1,5 @@
 import discord
-import config  # config.py contains a function get_token() that returns my private Discord bot token, not to be uploaded publicly
+import config  # config.py contains a function getToken() that returns my private Discord bot token, not to be uploaded publicly
 import daubotResponses
 import asyncio
 
