@@ -25,7 +25,7 @@ def getResponse(message):
         if message in commands_dict:
             return commands_dict[message]
         elif message == "!commands":
-            print commands_dict
+            print(commands_dict)
         elif message == "!secretary":
             members = ["Josh", "Sarthak", "Delila", "Adrian", "Brendan", "Calvin"]
             return getSecretary(members)
