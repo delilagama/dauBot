@@ -21,10 +21,11 @@ def getResponse(message):
         "!money" : "[Finance Folder](https://drive.google.com/drive/folders/1K6EMuQ965UPX8mEd3L9_tnvLGGbkIVye)"
     }
 
+    if message == "!commands":
+        return commands_dict
+
     if message.startswith("!"):
-        if message == "!commands":
-            return commands_dict
-        elif message in commands_dict:
+        if message in commands_dict:
             return commands_dict[message]
         elif message == "!secretary":
             members = ["Josh", "Sarthak", "Delila", "Adrian", "Brendan", "Calvin"]
@@ -32,7 +33,7 @@ def getResponse(message):
         elif message == "!mood":
             moodList = [
                 "dauBot is feeling mad at Joseph! ─⁠=⁠≡⁠Σ⁠(⁠╯⁠°⁠□⁠°⁠)⁠╯⁠︵⁠┻⁠┻", "dauBot is feeling disappointed with Nobo! ┐⁠(⁠￣⁠ヘ⁠￣⁠)⁠┌",
-                "dauBot is feeling grateful for GPT-4! (⁠✿⁠ ⁠♡⁠‿⁠♡⁠)", "dauBot is feeling frisky ( ＾◡＾)っ✂╰⋃╯", 
+                "dauBot is feeling grateful for GPT-4! (⁠✿⁠ ⁠♡⁠‿⁠♡⁠)", "dauBot is feeling frisky ( ＾◡＾)っ✂ *⋃*", 
                 "dauBot is feeling happy that deliverables are on time! ᕙ⁠(⁠⇀⁠‸⁠↼⁠‶⁠)⁠ᕗ", "dauBot is feeling like a closeted bisexual (⁠✿⁠⁠♡⁠‿⁠♡⁠)(⁠っ⁠˘⁠з⁠(⁠˘ ⁠⌣⁠˘⁠  )",
                 "dauBot is wishing it was in Fizz (⁠｡⁠ŏ⁠﹏⁠ŏ⁠)", "dauBot is feeling weary of deadlines! (⁠๑⁠•⁠﹏⁠•⁠)", "dauBot wants to experience human touch (ʃƪ＾3＾)",
                 "dauBot is celebrating good teamwork! ♪⁠┌⁠|⁠∵⁠|⁠┘⁠♪", "dauBot doesn't want to die after this capstone... ヘ⁠（⁠。⁠□⁠°⁠）⁠ヘ"
