@@ -21,35 +21,34 @@ def getResponse(message):
         "!money" : "[Finance Folder](https://drive.google.com/drive/folders/1K6EMuQ965UPX8mEd3L9_tnvLGGbkIVye)"
     }
 
-    if message == "!commands":
-        commands = (## documents \n"
-                    "!drive: Team Google Drive\n",
-                    "!teamminutes: Minutes for Team Meetings\n",
-                    "!consultationminutes: Minutes for Weekly Consultations\n",
-                    "!agenda: Agendas for Weekly Consultations\n",
-                    "!proposal: Project Proposal Folder\n",
-                    "!progressreport: Team Progress Report Folder\n",
-                    "!money: Finance Folder\n",
-                    ## goofs \n
-                    "!mood: dauBot's current mood or desires\n"
-            )
-        return commands
-    elif message.startswith("!"):
+    if message.startswith("!"):
         if message in commands_dict:
             return commands_dict[message]
-    elif message == "!secretary":
-        members = ["Josh", "Sarthak", "Delila", "Adrian", "Brendan", "Calvin"]
-        return getSecretary(members)
-    elif message == "!mood":
-        moodList = [
-            "dauBot is feeling mad at Joseph! ─⁠=⁠≡⁠Σ⁠(⁠╯⁠°⁠□⁠°⁠)⁠╯⁠︵⁠┻⁠┻", "dauBot is feeling disappointed with Nobo! ┐⁠(⁠￣⁠ヘ⁠￣⁠)⁠┌",
-            "dauBot is feeling grateful for GPT-4! (⁠✿⁠ ⁠♡⁠‿⁠♡⁠)", "dauBot is feeling frisky ( ＾◡＾)っ✂ *⋃*", 
-            "dauBot is feeling happy that deliverables are on time! ᕙ⁠(⁠⇀⁠‸⁠↼⁠‶⁠)⁠ᕗ", "dauBot is feeling like a closeted bisexual (⁠✿⁠⁠♡⁠‿⁠♡⁠)(⁠っ⁠˘⁠з⁠(⁠˘ ⁠⌣⁠˘⁠  )",
-            "dauBot is wishing it was in Fizz (⁠｡⁠ŏ⁠﹏⁠ŏ⁠)", "dauBot is feeling weary of deadlines! (⁠๑⁠•⁠﹏⁠•⁠)", "dauBot wants to experience human touch (ʃƪ＾3＾)",
-            "dauBot is celebrating good teamwork! ♪⁠┌⁠|⁠∵⁠|⁠┘⁠♪", "dauBot doesn't want to die after this capstone... ヘ⁠（⁠。⁠□⁠°⁠）⁠ヘ"
-        ]
-        mood = moodList[randint(0, len(moodList) - 1)]
-        print(f"Returning mood: {mood}")
-        return mood
+        elif message == "!commands":
+            commands = ("## drive 'n documents \n"
+                        "!drive: Team Google Drive \n"
+                        "!teamminutes: Minutes for Team Meetings \n"
+                        "!consultationminutes: Minutes for Weekly Consultations \n"
+                        "!agenda: Agendas for Weekly Consultations \n"
+                        "!proposal: Project Proposal Folder \n"
+                        "!progressreport: Team Progress Report Folder \n"
+                        "!money: Finance Folder \n"
+                        "## goofs \n"
+                        "!mood: dauBot's current mood or desires \n")
+            return commands
+        elif message == "!secretary":
+            members = ["Josh", "Sarthak", "Delila", "Adrian", "Brendan", "Calvin"]
+            return getSecretary(members)
+        elif message == "!mood":
+            moodList = [
+                "dauBot is feeling mad at Joseph! ─⁠=⁠≡⁠Σ⁠(⁠╯⁠°⁠□⁠°⁠)⁠╯⁠︵⁠┻⁠┻", "dauBot is feeling disappointed with Nobo! ┐⁠(⁠￣⁠ヘ⁠￣⁠)⁠┌",
+                "dauBot is feeling grateful for GPT-4! (⁠✿⁠ ⁠♡⁠‿⁠♡⁠)", "dauBot is feeling frisky ( ＾◡＾)っ✂ *⋃*", 
+                "dauBot is feeling happy that deliverables are on time! ᕙ⁠(⁠⇀⁠‸⁠↼⁠‶⁠)⁠ᕗ", "dauBot is feeling like a closeted bisexual (⁠✿⁠⁠♡⁠‿⁠♡⁠)(⁠っ⁠˘⁠з⁠(⁠˘ ⁠⌣⁠˘⁠  )",
+                "dauBot is wishing it was in Fizz (⁠｡⁠ŏ⁠﹏⁠ŏ⁠)", "dauBot is feeling weary of deadlines! (⁠๑⁠•⁠﹏⁠•⁠)", "dauBot wants to experience human touch (ʃƪ＾3＾)",
+                "dauBot is celebrating good teamwork! ♪⁠┌⁠|⁠∵⁠|⁠┘⁠♪", "dauBot doesn't want to die after this capstone... ヘ⁠（⁠。⁠□⁠°⁠）⁠ヘ"
+            ]
+            mood = moodList[randint(0, len(moodList) - 1)]
+            print(f"Returning mood: {mood}")
+            return mood
 
     return "Sorry, dauBot is incompetent in that matter (and therefore deserves to be in IGEN). Please type in !commands for help." 
