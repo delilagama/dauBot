@@ -27,7 +27,7 @@ def getResponse(message):
                 return commands_dict[message]
             elif message == "!commands":
                 commands = ("## Hi, I'm dauBot! Here are my commands. \n"
-                            "<h6> Please be gentle with me. (⁠･⁠–⁠･⁠⁠⁠)\(⁠･⁠◡⁠･⁠)/ </h6>\n"
+                            "Please be gentle with me. (⁠･⁠–⁠･⁠⁠⁠)\(⁠･⁠◡⁠･⁠)/\n"
                             "### drive 'n documents \n"
                             "`!drive`: Team Google Drive \n"
                             "`!teamminutes`: Minutes for Team Meetings \n"
