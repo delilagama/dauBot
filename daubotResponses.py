@@ -55,6 +55,6 @@ def getResponse(message):
                 print(f"Returning mood: {mood}")
                 return mood
 
-    else:
-        return "Sorry, dauBot is incompetent in that matter (and therefore deserves to be in IGEN). Please type in !commands for help." 
+            else:
+                return "Sorry, dauBot is incompetent in that matter (and therefore deserves to be in IGEN). Please type in !commands for help." 
     return None 
