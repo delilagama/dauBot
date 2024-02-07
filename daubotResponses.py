@@ -24,8 +24,10 @@ def getResponse(message):
     if message.startswith("!"):
         if message in commands_dict:
             return commands_dict[message]
+        elif message == "!commands":
+            print commands_dict
         elif message == "!secretary":
-            members = ["Brendan", "Calvin", "Josh", "Sarthak", "Delila", "Adrian"]
+            members = ["Josh", "Sarthak", "Delila", "Adrian", "Brendan", "Calvin"]
             return getSecretary(members)
         elif message == "!mood":
             moodList = [
