@@ -36,6 +36,7 @@ def getResponse(message):
                             "`!proposal`: Project Proposal Folder \n"
                             "`!progressreport`: Team Progress Report Folder \n"
                             "`!money`: Finance Folder \n"
+                            "### logistics \n"
                             "`!secretary`: This and next week's secretary for the Weekly Consultations \n"
                             "### goofs \n"
                             "`!mood`: dauBot's current mood or desires \n")
