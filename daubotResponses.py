@@ -6,7 +6,7 @@ def getSecretary(members):
     thisWeekIndex = weekNumber % len(members)
     nextWeekIndex = (weekNumber + 1) % len(members)
 
-    return f"This week's secretary is {members[thisWeekIndex]}.\nNext week's secretary is {members[nextWeekIndex]}.\nThis message updates every Sunday."
+    return f"This week's secretary is {members[thisWeekIndex]}.\nNext week's secretary is {members[nextWeekIndex]}.\nThis message updates every Monday."
 
 def getResponse(message):
     message = message.lower().strip()
